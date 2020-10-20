@@ -26,7 +26,6 @@ describe('Tasks suite', () => {
   let request = unauthorizedRequest;
   let testTaskId;
   let testBoardId;
-
   beforeAll(async () => {
     if (shouldAuthorizationBeTested) {
       request = await createAuthorizedRequest(unauthorizedRequest);

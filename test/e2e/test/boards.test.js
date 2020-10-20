@@ -15,7 +15,6 @@ const TEST_BOARD_DATA = {
 describe('Boards suite', () => {
   let request = unauthorizedRequest;
   let testBoardId;
-
   beforeAll(async () => {
     if (shouldAuthorizationBeTested) {
       request = await createAuthorizedRequest(unauthorizedRequest);
@@ -47,7 +46,6 @@ describe('Boards suite', () => {
           jestExpect(res.body).not.toHaveLength(0);
         });
     });
-
     it('should get a board by id', async () => {
       // Setup
       let expectedBoard;
